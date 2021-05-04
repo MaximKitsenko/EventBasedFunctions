@@ -29,7 +29,6 @@ namespace GraphCalc
             msgBus.Publish(new AChanged(2));
             msgBus.Publish(new CxChanged(5,7));
 
-            Console.WriteLine("PressNay key!");
             Console.ReadLine();
         }
     }
