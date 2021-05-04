@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using GraphCalc.Abstractions;
 using GraphCalc.Messages;
 
@@ -15,6 +16,7 @@ namespace GraphCalc.Services
 
         public void When(FEProcessed @event)
         {
+            Task.Delay(15).Wait();
             Console.WriteLine($"Service: {nameof(ResultSaverService)} received event {@event}" );
             Publish(new ResultProcessed());
         }

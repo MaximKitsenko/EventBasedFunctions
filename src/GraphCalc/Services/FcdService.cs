@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using GraphCalc.Abstractions;
 using GraphCalc.Messages;
 
@@ -15,12 +16,14 @@ namespace GraphCalc.Services
 
         public void When(FABProcessed @event)
         {
+            Task.Delay(100).Wait();
             Console.WriteLine($"Service: {nameof(FcdService)} received event {@event}" );
             Publish(new FCDProcessed());
         }
 
         public void When(CxChanged @event)
         {
+            Task.Delay(50).Wait();
             Console.WriteLine($"Service: {nameof(FcdService)} received event {@event}");
             Publish(new FCDProcessed());
         }

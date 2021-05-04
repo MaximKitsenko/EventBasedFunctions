@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using GraphCalc.Abstractions;
 using GraphCalc.Messages;
 
@@ -15,12 +16,14 @@ namespace GraphCalc.Services
 
         public void When(XChanged @event)
         {
+            Task.Delay(35).Wait();
             Console.WriteLine($"Service: {nameof(FxService)} received event {@event}" );
             Publish(new FXProcessed());
         }
 
         public void When(CxChanged @event)
         {
+            Task.Delay(30).Wait();
             Console.WriteLine($"Service: {nameof(FxService)} received event {@event}");
             Publish(new FXProcessed());
         }

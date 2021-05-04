@@ -36,7 +36,7 @@
 
         public override string ToString()
         {
-            return $"Event-{nameof(XChanged)}:{nameof(NewA)}={NewA}";
+            return $"Event-{nameof(AChanged)}:{nameof(NewA)}={NewA}";
         }
     }
 
@@ -63,7 +63,7 @@
 
         public override string ToString()
         {
-            return $"Event-{nameof(XChanged)}:{nameof(NewC)}={NewC},{nameof(NewX)}={NewX}";
+            return $"Event-{nameof(CxChanged)}:{nameof(NewC)}={NewC},{nameof(NewX)}={NewX}";
         }
     }
 

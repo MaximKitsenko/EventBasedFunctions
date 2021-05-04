@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using GraphCalc.Abstractions;
 using GraphCalc.Messages;
 
@@ -15,6 +16,7 @@ namespace GraphCalc.Services
 
         public void When(AChanged @event)
         {
+            Task.Delay(20).Wait();
             Console.WriteLine($"Service: {nameof(FabService)} received event {@event}" );
             Publish(new FABProcessed());
         }
